@@ -1,0 +1,153 @@
+body {
+    font-family: Bookman old style, sans-serif; 
+    background-color: #AFDAFC;
+    background-size: cover; 
+    margin: 0;
+}
+.header{
+    text-align: right;
+    background-color: #FFF0F5; 
+
+}
+.content {
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px; 
+    margin: 20px; 
+}
+.content-left {
+    width: 60%; 
+    background-color: #FFD1DC; 
+    margin-right: 20px;
+    padding: 20px; 
+    border-radius: 10px;
+}
+.content-right {
+    width: 40%; 
+    background-color: #FFD1DC;
+    padding: 20px; 
+    border-radius: 10px; 
+}
+
+h1, h2 {
+    color: #5c78db;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #363840;
+    margin: 10px 0;
+}
+
+ul {
+    padding-left: 20px; 
+}
+
+li {
+    font-size: 1.1em; 
+    color: #363840; 
+}
+
+a {
+    color: #5c78db; 
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+.container{
+
+    background-color:  #7FC7FF;
+    text-align: center; 
+    padding: 1rem;
+}
+.container-2{
+    padding: 1rem;
+    background-color: #7FC7FF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container-3{
+    background-color: #7FC7FF;
+    border: 2px solid #ccc; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; 
+}
+.container-4{
+    position: relative;
+}
+.block{ 
+    background-color: #FFF0F5;
+    width:200px;
+    height:200px; 
+    margin: auto; 
+    border-radius: 5px; 
+}
+.block-2{ 
+    width:200px; 
+    height:200px; 
+    background-color: #FFF0F5;
+    border-radius: 5px; 
+}
+.block-3{
+    width:200px; 
+    height:200px;
+    background-color: #FFF0F5;
+    border-radius: 5px;
+
+    margin: 10px; 
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+
+}
+.img1 {
+    width: 200px; 
+    padding: 1rem;
+    border-radius: 5px; 
+}
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.fixed-img img {
+    width:100px; 
+    height: 100px;
+}
+.block1{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 2px solid red;
+
+}
+.block2{
+    border: 2px solid green;
+    position: absolute;
+    left:120px;
+    top: 120px;
+}
+.block3{
+    border: 2px solid blue;
+    position: absolute;
+    left:240px;
+    top: 240px;
+
+}
+.fixed-img {
+    position: fixed;
+    bottom: 10px; 
+    right: 10px; 
+}

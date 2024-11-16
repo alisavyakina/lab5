@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+</head>
+<title>Лабораторная работа 1</title>
+<link rel="stylesheet" href="table.css">
+<body>
+<div class="header">
+    <a href="lab1.html">Основная страница</a>
+    <a href="page2.html">Позиционирование элементов</a>
+    <a href="table.html">Таблица</a>
+</div>
+
+<h1>Список студентов</h1>
+<table>
+    <caption>Данные студентов</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ФИО студента</th>
+            <th>Номер зачётной книжки</th>
+            <th>Номер группы</th>
+            <th>Пол</th>
+            <th>Возраст</th>
+            <th>Форма поступления</th>
+            <th>Название направления</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        <tr>
+            <td>1</td>
+            <td>Иванов Иван Иванович</td>
+            <td>123456</td>
+            <td>1</td>
+            <td>Мужской</td>
+            <td>20</td>
+            <td>Бюджет</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Петров Петр Петрович</td>
+            <td>234567</td>
+            <td>2</td>
+            <td>Мужской</td>
+            <td>20</td>
+            <td>Бюджет</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Сидорова Анна Сергеевна</td>
+            <td>345678</td>
+            <td>3</td>
+            <td>Женский</td>
+            <td>20</td>
+            <td>Бюджет</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Кузнецов Алексей Владимирович</td>
+            <td>456789</td>
+            <td>4</td>
+            <td>Мужской</td>
+            <td>20</td>
+            <td>Бюджет</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Михайлова Екатерина Андреевна</td>
+            <td>567890</td>
+            <td>5</td>
+            <td>Женский</td>
+            <td>20</td>
+            <td>Бюджет</td>
+            <td>ИВТ</td>
+        </tr>
+    </tbody>
+</table>
+
+<form id="Form1">
+    <h2>Добавить нового студента</h2>
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" required><br><br>
+
+    <label for="fio">ФИО студента:</label>
+    <input type="text" id="fio" name="fio" required><br><br>
+
+    <label for="zachotka">Номер зачётной книжки:</label>
+    <input type="text" id="zachotka" name="zachotka" required><br><br>
+
+    <label for="group">Номер группы:</label>
+    <input type="text" id="group" name="group" required><br><br>
+
+    <label for="gender">Пол:</label>
+    <select id="gender" name="gender" required>
+        <option value="Мужской">Мужской</option>
+        <option value="Женский">Женский</option>
+    </select><br><br>
+
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="form">Форма поступления:</label>
+    <select id="form" name="form" required>
+        <option value="Очная">Очная</option>
+        <option value="Заочная">Заочная</option>
+        <option value="Удалённая">Удалённая</option>
+    </select><br><br>
+
+    <label for="direction">Название направления:</label>
+    <input type="text" id="direction" name="direction" required><br><br>
+
+    <button type="submit">Добавить</button>
+</form>
+
+<script>
+    document.getElementById('Form1').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+ 
+    const formData = new FormData(event.target);
+    const studentData = {};
+    
+    formData.forEach((value, key) => {
+        studentData[key] = value;
+    });
+
+
+    const newRow = document.createElement('tr');
+    Object.values(studentData).forEach(text => {
+        const newCell = document.createElement('td');
+        newCell.textContent = text;
+        newRow.appendChild(newCell);
+    });
+    document.getElementById('studentTableBody').appendChild(newRow);
+
+    event.target.reset();
+});
+</script>
+
+
+</body>
+</html>
+
+</body>
+</html>
